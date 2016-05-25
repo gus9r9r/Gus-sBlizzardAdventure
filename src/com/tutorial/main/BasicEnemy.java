@@ -30,5 +30,4 @@ public class BasicEnemy extends GameObject{
 		g.fillRect(x, y, 16, 16);
 	}
 
-	//testing github. I hate github
 }
