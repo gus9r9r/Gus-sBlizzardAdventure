@@ -5,6 +5,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 public class Game extends Canvas implements Runnable {
 	
@@ -23,7 +24,7 @@ public class Game extends Canvas implements Runnable {
 		handler = new Handler();
 		this.addKeyListener(new KeyInput(handler));
 		
-		new Window(WIDTH, HEIGHT, "Let;s Build a Game!", this);
+		new Window(WIDTH, HEIGHT, "Lets Build a Game!", this);
 		
 		hud = new HUD();
 		
@@ -34,9 +35,15 @@ public class Game extends Canvas implements Runnable {
 		//handler.addObject(new Player(WIDTH/2 + 64, HEIGHT/2 -32, ID.Player2));
 		
 		//Enemy Objects Created
-		//for(int i = 0; i < 20; i++)
-		handler.addObject(new BasicEnemy(r.nextInt(WIDTH), r.nextInt(HEIGHT), ID.BasicEnemy));
-		
+		for(int i = 0; i < 50; i++){
+			handler.addObject(new BasicEnemy(0, r.nextInt(HEIGHT), ID.BasicEnemy));
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 	}
 	
 	public synchronized void start(){
