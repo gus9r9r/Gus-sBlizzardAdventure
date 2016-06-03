@@ -35,15 +35,18 @@ public class Game extends Canvas implements Runnable {
 		//handler.addObject(new Player(WIDTH/2 + 64, HEIGHT/2 -32, ID.Player2));
 		
 		//Enemy Objects Created
-		for(int i = 0; i < 50; i++){
-			handler.addObject(new BasicEnemy(0, r.nextInt(HEIGHT), ID.BasicEnemy));
+		
+		handler.addObject(new BasicEnemy(0, r.nextInt(HEIGHT), ID.BasicEnemy, handler));
+		
+		/*for(int i = 0; i < 50; i++){
+			handler.addObject(new BasicEnemy(0, r.nextInt(HEIGHT), ID.BasicEnemy, handler));
 			try {
 				Thread.sleep(5000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		}
+		}*/
 	}
 	
 	public synchronized void start(){
