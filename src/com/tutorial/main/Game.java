@@ -19,6 +19,7 @@ public class Game extends Canvas implements Runnable {
 	private Random r;
 	private Handler handler;
 	private HUD hud;
+	private Spawn spawner;
 	
 	public Game(){
 		handler = new Handler();
@@ -27,7 +28,7 @@ public class Game extends Canvas implements Runnable {
 		new Window(WIDTH, HEIGHT, "Lets Build a Game!", this);
 		
 		hud = new HUD();
-		
+		spawner = new Spawn(handler, hud);
 		
 		r = new Random();
 		
