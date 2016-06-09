@@ -29,4 +29,12 @@ public class HUD {
 		
 		g.drawString("Score: " + score, 15, 64);
 	}
+	
+	public void score(int score){
+		this.score = score;
+	}
+	
+	public int getScore(){
+		return score;
+	}
 }
