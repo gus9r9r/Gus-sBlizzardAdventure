@@ -27,6 +27,6 @@ public class HUD {
 		g.setColor(Color.white);
 		g.drawRect(15, 15, 200, 32);
 		
-		//g.drawString("Score: " + score, 15, 64);
+		g.drawString("Score: " + score, 15, 64);
 	}
 }
