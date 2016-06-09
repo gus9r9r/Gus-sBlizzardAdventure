@@ -17,6 +17,7 @@ public class HUD {
 		greenValue = Game.clamp(greenValue,0, 255);
 		
 		greenValue = HEALTH*2;
+		score++;
 	}
 	
 	public void render(Graphics g){
@@ -30,11 +31,4 @@ public class HUD {
 		g.drawString("Score: " + score, 15, 64);
 	}
 	
-	public void score(int score){
-		this.score = score;
-	}
-	
-	public int getScore(){
-		return score;
-	}
 }

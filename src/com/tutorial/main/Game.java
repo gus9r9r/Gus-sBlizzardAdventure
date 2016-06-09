@@ -39,7 +39,7 @@ public class Game extends Canvas implements Runnable {
 		
 		handler.addObject(new BasicEnemy(0, r.nextInt(HEIGHT), ID.BasicEnemy, handler));
 		
-		/*for(int i = 0; i < 50; i++){
+		for(int i = 0; i < 50; i++){
 			handler.addObject(new BasicEnemy(0, r.nextInt(HEIGHT), ID.BasicEnemy, handler));
 			try {
 				Thread.sleep(5000);
@@ -47,7 +47,7 @@ public class Game extends Canvas implements Runnable {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		}*/
+		}
 	}
 	
 	public synchronized void start(){
