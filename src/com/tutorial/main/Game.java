@@ -21,6 +21,16 @@ public class Game extends Canvas implements Runnable {
 	private HUD hud;
 	private Spawn spawner;
 	
+	
+	//List of states that the game can be in
+	public enum STATE {
+		Menu,
+		Game
+	}
+	
+	//Sets what STATE you are in 
+	public STATE gameState = STATE.Menu;
+	
 	public Game(){
 		handler = new Handler();
 		this.addKeyListener(new KeyInput(handler));
