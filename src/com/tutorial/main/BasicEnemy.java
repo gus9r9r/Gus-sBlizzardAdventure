@@ -12,9 +12,9 @@ public class BasicEnemy extends GameObject{
 		super(x, y, id);
 		
 		this.handler = handler;
-		
-		velX = 5;
-		velY = 5;
+
+		velX = 4;
+		velY = 4;
 	}
 	
 	public Rectangle getBounds(){
